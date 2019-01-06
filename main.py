@@ -1,5 +1,4 @@
 import os
-
 import pytube
 import sys
 import requests
@@ -26,14 +25,21 @@ def mode_select():
 
 
 def mode_1():
-    video_url = input('YouTube url:')
+    global file_size
+    video_url = input()
     print('video url :', video_url)
-    yt = pytube.YouTube(video_url)
+    try:
+        yt = pytube.YouTube(video_url, on_progress_callback=show_progress_bar)
+    except TypeError as e:
+        print(e)
+        video_continue()
     try:
         mkdir('../videos')
         print('影片名稱：%s' % yt.title)
         print('下載中...')
-        yt.streams.filter(type='video', subtype='mp4').first().download('../videos')
+        video_type = yt.streams.filter(type='video', subtype='mp4').first()
+        file_size = video_type.filesize
+        video_type.download('../videos')
         print('下載完成！！')
         video_continue()
     except pytube.exceptions.RegexMatchError as e:
@@ -43,12 +49,13 @@ def mode_1():
 
 
 def mode_2():
+    global file_size
     count = 1
     video_list = []
     url_list = []
     # print('功能尚未開啟！！抱歉')
     kw = input('請輸入關鍵字：')
-    # kw = '程響'
+    # kw = '蠟筆小新'
     url = 'https://www.youtube.com/results?search_query=%s' % kw
     req = requests.get(url)
     soup = bs4(req.content, 'html.parser')
@@ -63,12 +70,19 @@ def mode_2():
     choice_video_index = int(input('請選擇欲下載的影片(輸入編號即可)：'))
     choice_video_index -= 1
     video_url = url_list[choice_video_index]
-    yt = pytube.YouTube(video_url)
+    # , on_progress_callback = show_progress_bar
+    try:
+        yt = pytube.YouTube(video_url, on_progress_callback=show_progress_bar)
+    except TypeError as e:
+        print(e)
+        video_continue()
     try:
         mkdir('../videos')
         print('影片名稱：%s' % yt.title)
         print('下載中...')
-        yt.streams.filter(type='video', subtype='mp4').first().download('../videos')
+        video_type = yt.streams.filter(type='video', subtype='mp4').first()
+        file_size = video_type.filesize
+        video_type.download('../videos')
         print('下載完成！！')
         video_continue()
     except pytube.exceptions.RegexMatchError as e:
@@ -84,6 +98,10 @@ def mkdir(path):
         print("---建立資料夾中---")
         os.makedirs(path)  # 建立資料夾
         print("---創建OK---")
+
+
+def show_progress_bar(stream, chunk, file_handle, bytes_remaining):
+    print(round((1 - bytes_remaining / file_size) * 100, 1), '% done...')
 
 
 def video_continue():
