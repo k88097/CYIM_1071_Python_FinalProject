@@ -65,15 +65,16 @@ python main.py
 
 ---
 
-* [mode_select()](#mode_select)
-* mode_1()
-* mode_2()
-* mkdir(path)
-* show_progress_bar(stream, chunk, file_handle, bytes_remaining)
-* video_continue()
-
----
-
-<h2 id="mode_select">mode_select()</h2>
+* ###mode_select()
+    影片下載的模式選擇。
+* ###mode_1()
+    下載模式一。
+* ###mode_2()
+    下載模式二。
+* ### mkdir(path)
+    `path`：資料夾路徑  
+    檢查資料夾路徑是否存在，不存在的話將會自動創建。
+* ###show_progress_bar(stream, chunk, file_handle, bytes_remaining)
+* ###video_continue()
 
 ---
