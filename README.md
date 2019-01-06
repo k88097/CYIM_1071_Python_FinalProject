@@ -65,8 +65,8 @@ python main.py
 
 ---
 
-* ###mode_select()
-    影片下載的模式選擇。
+* ###mode_select()  
+>>影片下載的模式選擇。
 * ###mode_1()
     下載模式一。
 * ###mode_2()
