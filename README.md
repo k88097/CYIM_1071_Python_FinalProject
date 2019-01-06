@@ -72,13 +72,13 @@ python main.py
 * ###**mode_2()**
     下載模式二。
 * ### **mkdir(path)**
-    `path`(str)--資料夾路徑  
+    * `path`(_str_)--資料夾路徑  
     檢查資料夾路徑是否存在，不存在的話將會自動創建。
 * ###**show_progress_bar(stream, chunk, file_handle, bytes_remaining)**
-    `stream`--
-    `chunk`--
-    `file_handle`--
-    `bytes_remaining`--
+    * `stream`(_object_)--
+    * `chunk`(_str_)--
+    * `file_handle`(`io.BufferedWriter`)--
+    * `bytes_remaining`(_int_)--
 * ###**video_continue()**
     是否要離開或是繼續下載其他影片
 
