@@ -1,32 +1,33 @@
 ## YouTube影片下載器
 
+---
 此程式有分為兩種模式。
-
 1. 直接輸入**YouTube網址**即可下載影片。
 2. 輸入**關鍵字**，下載影片。
 ---
 
-## 模式一
+## _模式一_
+使用步驟：
 
-Next, you’ll add a new file to this repository.
-
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
-
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+1. 進入程式後，輸入**1**進入到**模式一**。
+2. 貼上**YouTube網址**並且按下**Enter**。  
+3. 程式會自動判斷指定資料夾是存在，若是不存在則會自動建立。
+4. 影片自動下載至指定資料夾。
+5. 下載完成。
+6. 程式會詢問是否繼續下載或是離開程式。
+7. 輸入 **Q** or **q** 離開程式。
 
 ---
 
-## Clone a repository
+## _模式二_
+使用步驟：
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
-
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
-
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+1. 進入程式後，輸入**2**進入到**模式二**。
+2. 輸入**關鍵字**，程式會自動搜尋[YouTube](https://www.youtube.com/)上有關此**關鍵字**的影片。
+3. 程式列出幾個與輸入的關鍵字相關的影片。
+4. 輸入**影片清單編號**即可下載影片。
+5. 程式會自動判斷指定資料夾是存在，若是不存在則會自動建立。
+6. 影片自動下載至指定資料夾。
+7. 下載完成。
+8. 程式會詢問是否繼續下載或是離開程式。
+9.  輸入 **Q** or **q** 離開程式。
