@@ -1,16 +1,16 @@
-## YouTube影片下載器
+## **YouTube影片下載器**
 
 ---
 
-###CYIM 107-1 Python程式設計 期末專案
+###**CYIM 107-1 Python程式設計 期末專案**
 組員：
 
-1. 10444133 資管四甲 趙品淵
-2. 10444148 資管四甲 徐子婷
+1. **10444133 資管四甲 趙品淵**
+2. **10444148 資管四甲 徐子婷**
 
 ---
 
-###使用此程式前，務必閱讀下列說明
+###**使用此程式前，務必閱讀下列說明**
 
 在命令提示字元(CMD)中輸入
 ```
@@ -26,14 +26,14 @@ python main.py
 
 ---
 
-此程式有分為兩種模式。
+**此程式有分為兩種模式。**
 
 1. 直接輸入**YouTube網址**即可下載影片。
 2. 輸入**關鍵字**，下載影片。
 
 ---
 
-## _模式一_
+## **_模式一_**
 使用步驟：
 
 1. 進入程式後，輸入**1**進入到**模式一**。
@@ -46,7 +46,7 @@ python main.py
 
 ---
 
-## _模式二_
+## **_模式二_**
 使用步驟：
 
 1. 進入程式後，輸入**2**進入到**模式二**。
@@ -61,20 +61,25 @@ python main.py
 
 ---
 
-##Functions說明
+##**Functions說明**
 
 ---
 
-* ###mode_select()  
->影片下載的模式選擇。
-* ###mode_1()
+* ###**mode_select()**
+    影片下載的模式選擇。
+* ###**mode_1()**
     下載模式一。
-* ###mode_2()
+* ###**mode_2()**
     下載模式二。
-* ### mkdir(path)
-    `path`：資料夾路徑  
+* ### **mkdir(path)**
+    `path`(str)--資料夾路徑  
     檢查資料夾路徑是否存在，不存在的話將會自動創建。
-* ###show_progress_bar(stream, chunk, file_handle, bytes_remaining)
-* ###video_continue()
+* ###**show_progress_bar(stream, chunk, file_handle, bytes_remaining)**
+    `stream`--
+    `chunk`--
+    `file_handle`--
+    `bytes_remaining`--
+* ###**video_continue()**
+    是否要離開或是繼續下載其他影片
 
 ---
