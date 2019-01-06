@@ -81,8 +81,8 @@ python main.py
 * ###**show_progress_bar(stream, chunk, file_handle, bytes_remaining)**
     * `stream`(_object_)--Stream型態的物件。
     * `chunk`(_str_)--尚未寫進資料的影片二維數據。
-    * `file_handle`(`io.BufferedWriter`)--正在處理影片的寫入
-    * `bytes_remaining`(_int_)--尚未下載完成的影片容量(_Bytes_)
+    * `file_handle`(`io.BufferedWriter`)--正在處理影片的寫入。
+    * `bytes_remaining`(_int_)--尚未下載完成的影片容量(_Bytes_)。
     顯示下載進度  
     **Return Type:** _None_
 * ###**video_continue()**
