@@ -58,3 +58,22 @@ python main.py
 7. 下載完成。
 8. 程式會詢問是否繼續下載或是離開程式。
 9.  輸入 **Q** or **q** 離開程式。
+
+---
+
+##Functions說明
+
+---
+
+* [mode_select()](#mode_select)
+* mode_1()
+* mode_2()
+* mkdir(path)
+* show_progress_bar(stream, chunk, file_handle, bytes_remaining)
+* video_continue()
+
+---
+
+<h2 id="mode_select">mode_select()</h2>
+
+---
