@@ -2,7 +2,7 @@
 
 ---
 
-###**CYIM 107-1 Python程式設計 期末專案**
+### **CYIM 107-1 Python程式設計 期末專案**
 組員：
 
 1. **10444133 資管四甲 趙品淵**
@@ -10,7 +10,7 @@
 
 ---
 
-###**使用此程式前，務必閱讀下列說明**
+### **使用此程式前，務必閱讀下列說明**
 
 於命令提示字元(CMD)中輸入
 ```
@@ -26,14 +26,14 @@ python main.py
 
 ---
 
-##**此程式有分為兩種模式。**
+## **此程式有分為兩種模式。**
 
 1. 直接輸入**YouTube網址**即可下載影片。
 2. 輸入**關鍵字**，下載影片。
 
 ---
 
-## **_模式一_**
+##  **_模式一_**
 使用步驟：
 
 1. 進入程式後，輸入**1**進入到**模式一**。
@@ -46,7 +46,7 @@ python main.py
 
 ---
 
-## **_模式二_**
+##  **_模式二_**
 使用步驟：
 
 1. 進入程式後，輸入**2**進入到**模式二**。
@@ -61,17 +61,17 @@ python main.py
 
 ---
 
-##**Functions說明**
+## **_Functions說明_**
 
 ---
 
-* ###**mode_select()**
+* ### **mode_select()**
     * 影片下載的模式選擇。  
     * **Return Type:** _None_
-* ###**mode_1()**
+* ### **mode_1()**
     * 下載模式一。  
     * **Return Type:** _None_
-* ###**mode_2()**
+* ### **mode_2()**
     * 下載模式二。  
     * **Return Type:** _None_
 * ### **mkdir(path)**
@@ -79,7 +79,7 @@ python main.py
     * **Parameters**:
         * `path`(_str_)--資料夾路徑 
     * **Return Type:** _None_
-* ###**show_progress_bar(stream, chunk, file_handle, bytes_remaining)**
+* ### **show_progress_bar(stream, chunk, file_handle, bytes_remaining)**
     * 顯示下載進度。
     * **Parameters**:
         * `stream`(_object_)--Stream型態的物件。
@@ -87,13 +87,13 @@ python main.py
         * `file_handle`(_io.BufferedWriter_)--正在處理影片的寫入。
         * `bytes_remaining`(_int_)--尚未下載完成的影片容量(_Bytes_)。           
     * **Return Type:** _None_
-* ###**video_continue()**
+* ### **video_continue()**
     * 是否要離開或是繼續下載其他影片。  
     * **Return Type:** _None_
 
 ---
 
-##**錯誤報告**
+## **錯誤報告**
 
 ---
 
