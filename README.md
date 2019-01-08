@@ -76,12 +76,12 @@ python main.py
     * **Return Type:** _None_
 * ### **mkdir(path)**
     * 檢查下載資料夾路徑是否存在，不存在的話將會自動創建。
-    * Parameters:
+    * **Parameters**:
         * `path`(_str_)--資料夾路徑 
     * **Return Type:** _None_
 * ###**show_progress_bar(stream, chunk, file_handle, bytes_remaining)**
     * 顯示下載進度。
-    * Parameters:
+    * **Parameters**:
         * `stream`(_object_)--Stream型態的物件。
         * `chunk`(_str_)--尚未寫進資料的影片二維數據。
         * `file_handle`(_io.BufferedWriter_)--正在處理影片的寫入。
@@ -90,5 +90,38 @@ python main.py
 * ###**video_continue()**
     * 是否要離開或是繼續下載其他影片。  
     * **Return Type:** _None_
+
+---
+
+##**錯誤報告**
+
+---
+
+如果執行後得到這串錯誤訊息
+```
+pytube.exceptions.RegexMatchError: regex pattern (yt\.akamaized\.net/\)\s*\|\|\s*.*?\s*c\s*&&\s*d\.set\([^,]+\s*,\s*(?P<sig>[a-zA-Z0-9$]+)\() had zero matches
+```
+**解決辦法：**
+修改 **pytube/cipher.py** 中的第 **38**~**43** 行  
+**原本：**
+```python
+pattern = [
+        r'yt\.akamaized\.net/\)\s*\|\|\s*'
+        r'.*?\s*c\s*&&\s*d\.set\([^,]+\s*,\s*(?P<sig>[a-zA-Z0-9$]+)\(',
+        r'\.sig\|\|(?P<sig>[a-zA-Z0-9$]+)\(',
+        r'\bc\s*&&\s*d\.set\([^,]+\s*,\s*(?P<sig>[a-zA-Z0-9$]+)\(',
+    ]
+```
+**修改後：**
+```python
+pattern = [
+        r'\bc\s*&&\s*d\.set\([^,]+,.*?\((?P<sig>[a-zA-Z0-9$]+)\(\(0\s*,\s*window.decodeURIComponent',
+        r'yt\.akamaized\.net/\)\s*\|\|\s*'
+        r'.*?\s*c\s*&&\s*d\.set\([^,]+\s*,\s*(?P<sig>[a-zA-Z0-9$]+)\(',
+        r'\.sig\|\|(?P<sig>[a-zA-Z0-9$]+)\(',
+        r'\bc\s*&&\s*d\.set\([^,]+\s*,\s*(?P<sig>[a-zA-Z0-9$]+)\(',
+    ]
+```
+這樣即可解決錯誤訊息了。
 
 ---
