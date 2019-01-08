@@ -76,15 +76,16 @@ python main.py
     * **Return Type:** _None_
 * ### **mkdir(path)**
     * 檢查下載資料夾路徑是否存在，不存在的話將會自動創建。
-    * Parameters: * `path`(_str_)--資料夾路徑 
+    * Parameters:
+        * `path`(_str_)--資料夾路徑 
     * **Return Type:** _None_
 * ###**show_progress_bar(stream, chunk, file_handle, bytes_remaining)**
     * 顯示下載進度。
-    * Parameters: * `stream`(_object_)--Stream型態的物件。
-                 * `chunk`(_str_)--尚未寫進資料的影片二維數據。
-                 * `file_handle`(_io.BufferedWriter_)--正在處理影片的寫入。
-                 * `bytes_remaining`(_int_)--尚未下載完成的影片容量(_Bytes_)。
-           
+    * Parameters:
+        * `stream`(_object_)--Stream型態的物件。
+        * `chunk`(_str_)--尚未寫進資料的影片二維數據。
+        * `file_handle`(_io.BufferedWriter_)--正在處理影片的寫入。
+        * `bytes_remaining`(_int_)--尚未下載完成的影片容量(_Bytes_)。           
     * **Return Type:** _None_
 * ###**video_continue()**
     * 是否要離開或是繼續下載其他影片。  
