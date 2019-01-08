@@ -1,8 +1,6 @@
 ## **YouTube影片下載器**
 
----
-
-### **CYIM 107-1 Python程式設計 期末專案**
+### **_CYIM 107-1 Python程式設計 期末專案_**
 組員：
 
 1. **10444133 資管四甲 趙品淵**
@@ -63,8 +61,6 @@ python main.py
 
 ## **_Functions說明_**
 
----
-
 * ### **mode_select()**
     * 影片下載的模式選擇。  
     * **Return Type:** _None_
@@ -95,8 +91,6 @@ python main.py
 
 ## **錯誤報告**
 
----
-
 如果執行後得到這串錯誤訊息
 ```
 pytube.exceptions.RegexMatchError: regex pattern (yt\.akamaized\.net/\)\s*\|\|\s*.*?\s*c\s*&&\s*d\.set\([^,]+\s*,\s*(?P<sig>[a-zA-Z0-9$]+)\() had zero matches
@@ -123,5 +117,3 @@ pattern = [
     ]
 ```
 這樣即可解決錯誤訊息了。
-
----
