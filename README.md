@@ -12,7 +12,7 @@
 
 ###**使用此程式前，務必閱讀下列說明**
 
-在命令提示字元(CMD)中輸入
+於命令提示字元(CMD)中輸入
 ```
 pip install -r requirements.txt
 ```
@@ -26,7 +26,7 @@ python main.py
 
 ---
 
-**此程式有分為兩種模式。**
+##**此程式有分為兩種模式。**
 
 1. 直接輸入**YouTube網址**即可下載影片。
 2. 輸入**關鍵字**，下載影片。
@@ -66,27 +66,28 @@ python main.py
 ---
 
 * ###**mode_select()**
-    影片下載的模式選擇。  
-    **Return Type:** _None_
+    * 影片下載的模式選擇。  
+    * **Return Type:** _None_
 * ###**mode_1()**
-    下載模式一。  
-    **Return Type:** _None_
+    * 下載模式一。  
+    * **Return Type:** _None_
 * ###**mode_2()**
-    下載模式二。  
-    **Return Type:** _None_
+    * 下載模式二。  
+    * **Return Type:** _None_
 * ### **mkdir(path)**
-    * `path`(_str_)--資料夾路徑  
-    檢查下載資料夾路徑是否存在，不存在的話將會自動創建。  
-    **Return Type:** _None_
+    * 檢查下載資料夾路徑是否存在，不存在的話將會自動創建。
+    * Parameters: * `path`(_str_)--資料夾路徑 
+    * **Return Type:** _None_
 * ###**show_progress_bar(stream, chunk, file_handle, bytes_remaining)**
-    * `stream`(_object_)--Stream型態的物件。
-    * `chunk`(_str_)--尚未寫進資料的影片二維數據。
-    * `file_handle`(`io.BufferedWriter`)--正在處理影片的寫入。
-    * `bytes_remaining`(_int_)--尚未下載完成的影片容量(_Bytes_)。  
-    顯示下載進度  
-    **Return Type:** _None_
+    * 顯示下載進度。
+    * Parameters:   * `stream`(_object_)--Stream型態的物件。
+                    * `chunk`(_str_)--尚未寫進資料的影片二維數據。
+                    * `file_handle`(_io.BufferedWriter_)--正在處理影片的寫入。
+                    * `bytes_remaining`(_int_)--尚未下載完成的影片容量(_Bytes_)。
+           
+    * **Return Type:** _None_
 * ###**video_continue()**
-    是否要離開或是繼續下載其他影片  
-    **Return Type:** _None_
+    * 是否要離開或是繼續下載其他影片。  
+    * **Return Type:** _None_
 
 ---

@@ -7,6 +7,8 @@ from bs4 import BeautifulSoup as bs4
 
 def main():
     print('---歡迎使用此程式下載YouTube影片---')
+    global path
+    path = './video'
     mode_select()
 
 
@@ -26,20 +28,19 @@ def mode_select():
 
 def mode_1():
     global file_size
-    video_url = input()
-    print('video url :', video_url)
+    video_url = input('YouTube網址：')
     try:
         yt = pytube.YouTube(video_url, on_progress_callback=show_progress_bar)
     except TypeError as e:
         print(e)
         video_continue()
     try:
-        mkdir('../videos')
+        mkdir(path)
         print('影片名稱：%s' % yt.title)
         print('下載中...')
         video_type = yt.streams.filter(type='video', subtype='mp4').first()
         file_size = video_type.filesize
-        video_type.download('../videos')
+        video_type.download(path)
         print('下載完成！！')
         video_continue()
     except pytube.exceptions.RegexMatchError as e:
@@ -77,12 +78,12 @@ def mode_2():
         print(e)
         video_continue()
     try:
-        mkdir('../videos')
+        mkdir(path)
         print('影片名稱：%s' % yt.title)
         print('下載中...')
         video_type = yt.streams.filter(type='video', subtype='mp4').first()
         file_size = video_type.filesize
-        video_type.download('../videos')
+        video_type.download(path)
         print('下載完成！！')
         video_continue()
     except pytube.exceptions.RegexMatchError as e:
@@ -91,8 +92,8 @@ def mode_2():
         video_continue()
 
 
-def mkdir(path):
-    folder = os.path.exists(path)
+def mkdir(dir_path):
+    folder = os.path.exists(dir_path)
     # 判斷資料夾是否存在，如果不存在即會自動建立
     if not folder:
         print("---建立資料夾中---")
