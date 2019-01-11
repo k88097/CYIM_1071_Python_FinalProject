@@ -11,13 +11,13 @@
 ### **使用此程式前，務必閱讀下列說明**
 
 於命令提示字元(CMD)中輸入
-```
+``` bash
 pip install -r requirements.txt
 ```
 確認相關套件是否安裝成功。  
 
 接著輸入
-``` python
+``` bash
 python main.py
 ```
 開始執行程式。
@@ -92,7 +92,7 @@ python main.py
 ## **錯誤報告**
 
 如果執行後得到這串錯誤訊息
-```
+```consloe
 pytube.exceptions.RegexMatchError: regex pattern (yt\.akamaized\.net/\)\s*\|\|\s*.*?\s*c\s*&&\s*d\.set\([^,]+\s*,\s*(?P<sig>[a-zA-Z0-9$]+)\() had zero matches
 ```
 **解決辦法：**  
